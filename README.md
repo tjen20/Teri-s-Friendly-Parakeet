@@ -1,7 +1,7 @@
 # Challenge-Three- Teri-s-Friendly-Parakeet
 
 ## Purpose
-
+To generate passwords
 
 ## Built with
 * HTML
@@ -10,3 +10,5 @@
 
 ## Website 
 https://tjen20.github.io/Teri-s-Friendly-Parakeet/
+
+## Image

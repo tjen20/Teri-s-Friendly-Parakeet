@@ -13,7 +13,7 @@ function generatePassword(){
     var passwordCharacterOptions = ''
 
     if (passwordLength < 8 || passwordLength >128) {
-        alert('Must be between 8 and 128 characters')
+        alert('Password must be between 8 and 128 characters')
     }
 
     if (lowercase == true) {
@@ -32,12 +32,15 @@ function generatePassword(){
         passwordCharacterOptions = passwordCharacterOptions + specialCharacterOptions
     }
 
-    if (lowercase == false && uppercase == false && numericCharacters == false && specialCharacters == false){
+    if (lowercase == false && uppercase == false && numericCharacters == false && specialCharacters == false) {
         alert('Must select at least one category')
         return
     }
 
     console.log(passwordLength, lowercase, uppercase, numeric, specialCharacters, passwordCharacterOptions)
+
+var generatePassword= (passwordLength + passwordCharacterOptions)
+
 }
 
 // Get references to the #generate element
@@ -53,4 +56,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
