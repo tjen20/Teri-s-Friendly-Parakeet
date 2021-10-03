@@ -15,8 +15,6 @@ function generatePassword(){
     const specialCharacterOptions = '!@#$%^&*()-+_='
     var passwordCharacterOptions = ''
 
-   
-
     if (lowercase == true) {
         passwordCharacterOptions = passwordCharacterOptions + lowercaseCharacters
     }
@@ -38,14 +36,17 @@ function generatePassword(){
         return
     }
 
-    console.log(passwordLength, lowercase, uppercase, numeric, specialCharacters, passwordCharacterOptions)
+    generatePassword();
 
-    var generatePassword = ''
-
-    for (let i = 0; i < passwordLength; i++) {
-        passwordStr += charStr[randomNum(0, charStr.length)];
+    function randomNum(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
       }
 
+  let passwordStr = ('');
+
+  for (let i = 0; i < passwordLength; i++) {
+    passwordStr += passwordCharacterOptions[randomNum(0, charStr.length)];
+  }
 }
 
 // Get references to the #generate element
