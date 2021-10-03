@@ -3,6 +3,7 @@ function generatePassword(){
     const passwordLength = parseInt(prompt('How long do you want your password to be?'))
     if (passwordLength < 8 || passwordLength >128) {
         window.alert('Password must be between 8 and 128 characters')
+
     };
     const lowercase = confirm('Do you want lowercase in your password?');
     const uppercase = confirm('Do you want uppercase in your password?');
@@ -38,7 +39,9 @@ function generatePassword(){
     }
     }
 
-    generatePassword();
+    if (generatePassword = '') {
+        generatePassword();
+      }
 
     function randomNum(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
@@ -47,9 +50,10 @@ function generatePassword(){
     let passwordStr = ('');
 
     for (let i = 0; i < passwordLength; i++) {
-    passwordStr += passwordCharacterOptions[randomNum(0, charStr.length)];
-
+        passwordStr += passwordCharacterOptions[randomNum(0, generatePassword.length)];
   }
+
+    return passwordStr;
 }
 
 // Get references to the #generate element
