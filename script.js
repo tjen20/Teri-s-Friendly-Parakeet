@@ -1,20 +1,21 @@
 // Assignment code here
 function generatePassword(){
-    var passwordLength = parseInt(prompt('How long do you want your password to be?'));
-    var lowercase = confirm('Do you want lowercase in your password?');
-    var uppercase = confirm('Do you want uppercase in your password?');
-    var numeric = confirm('Do you want to include numbers?');
-    var specialCharacters = confirm('Do you want to include special characters?');
+    const passwordLength = parseInt(prompt('How long do you want your password to be?'))
+    if (passwordLength < 8 || passwordLength >128) {
+        window.alert('Password must be between 8 and 128 characters')
+    };
+    const lowercase = confirm('Do you want lowercase in your password?');
+    const uppercase = confirm('Do you want uppercase in your password?');
+    const numeric = confirm('Do you want to include numbers?');
+    const specialCharacters = confirm('Do you want to include special characters?');
     
-    var lowercaseCharacters = 'abcdefghijklmnopqrstuvwxyz'
-    var uppercaseCharacters = 'ABCDEFGHIJKLMNOPQURSTUVWXYZ'
-    var numericCharacters = '1234567890'
-    var specialCharacterOptions = '!@#$%^&*()-+_='
+    const lowercaseCharacters = 'abcdefghijklmnopqrstuvwxyz'
+    const uppercaseCharacters = 'ABCDEFGHIJKLMNOPQURSTUVWXYZ'
+    const numericCharacters = '1234567890'
+    const specialCharacterOptions = '!@#$%^&*()-+_='
     var passwordCharacterOptions = ''
 
-    if (passwordLength < 8 || passwordLength >128) {
-        alert('Password must be between 8 and 128 characters')
-    }
+   
 
     if (lowercase == true) {
         passwordCharacterOptions = passwordCharacterOptions + lowercaseCharacters
@@ -33,13 +34,17 @@ function generatePassword(){
     }
 
     if (lowercase == false && uppercase == false && numericCharacters == false && specialCharacters == false) {
-        alert('Must select at least one category')
+        window.alert('Must select at least one category')
         return
     }
 
     console.log(passwordLength, lowercase, uppercase, numeric, specialCharacters, passwordCharacterOptions)
 
-var generatePassword= (passwordLength + passwordCharacterOptions)
+    var generatePassword = ''
+
+    for (let i = 0; i < passwordLength; i++) {
+        passwordStr += charStr[randomNum(0, charStr.length)];
+      }
 
 }
 
