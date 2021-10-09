@@ -16,7 +16,6 @@ function generatePassword(){
     const specialCharacterOptions = '!@#$%^&*()-+_=';
     var passwordCharacterOptions = '';
 
-    function passwordCharacterOptions() {
     if (lowercase == true) {
         passwordCharacterOptions = passwordCharacterOptions + lowercaseCharacters
     }
@@ -33,10 +32,9 @@ function generatePassword(){
         passwordCharacterOptions = passwordCharacterOptions + specialCharacterOptions
     }
 
-    if (lowercase == false && uppercase == false && numericCharacters == false && specialCharacters == false) {
+    if (lowercase == false && uppercase == false && numeric == false && specialCharacters == false) {
         window.alert('Must select at least one category')
         return
-    }
     }
 
     if (generatePassword = '') {
@@ -50,7 +48,7 @@ function generatePassword(){
     let passwordStr = ('');
 
     for (let i = 0; i < passwordLength; i++) {
-        passwordStr += passwordCharacterOptions[randomNum(0, generatePassword.length)];
+        passwordStr += passwordCharacterOptions[randomNum(0, passwordCharacterOptions.length)];
   }
 
     return passwordStr;
